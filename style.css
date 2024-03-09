@@ -1,0 +1,292 @@
+div {
+    padding: 20px;
+    margin: 15px;
+} 
+/* YAZILARIN VE GÖRSELLERİN BİR ARADA OLDUĞU DİV - section açabilirdim belki*/
+.headers{
+    padding: 20px;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+ /* MENU KISMI*/
+.header-menu {
+    background-color: powderblue;
+    width: 250px;
+    height:300px;
+    align-self:flex-end;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 3px; 
+    top: 0;  
+    border-radius: 15px;
+}
+.header-buttons {
+    border: none;
+    background-color: transparent; 
+    color: white; 
+    padding: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;  
+    font-size: 20px;
+    display: flex;
+    flex-direction:row;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration-line: none;
+}
+
+.header-buttons:hover {
+    color: rgb(234, 33, 80); 
+   
+}
+/* PROFİL KISMI*/
+.header-profile{
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+    height: 200px;
+    color: black;
+    border-radius: 25px;
+    background-color:rgb(247, 192, 225) ;
+    top: 0;
+    left:0;   
+}
+.head{
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+}
+.features{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*ANA SAYFA YAZI KISMI*/
+.header-text{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid;
+    border-color: rgb(33, 162, 136);
+    border-width: 2px;
+    transition: border-color 0.3s; 
+    border-radius: 25px;
+    position: relative;
+}
+.header-text:hover {
+    border-color: rgb(234, 33, 80); 
+    background-color: rgb(245, 246, 248);
+}
+
+.header-text-header{
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.header-text-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.header-text-lower-text{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid;
+    border-color: rgb(33, 162, 136);
+    border-width: 2px;
+    transition: border-color 0.3s; 
+    border-radius: 25px;
+}
+.header-text-lower-text:hover{
+    border-color: rgb(234, 33, 80); 
+    background-color: rgb(245, 246, 248);
+}
+.header-text-head-second{
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header-text-second{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.header-text-third-lower-header{
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header-text-third-lower-text{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid;
+    border-color: rgb(33, 162, 136);
+    border-width: 2px;
+    transition: border-color 0.3s; 
+    border-radius: 25px;
+}
+.header-text-third-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.header-text-third-lower-text:hover{
+    border-color: rgb(234, 33, 80); 
+    background-color: rgb(245, 246, 248);
+}
+
+
+.header-text-fourth-lower-text{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+   border: 2px solid;
+   border-color: rgb(33, 162, 136);
+   border-width: 2px;
+   transition: border-color 0.3s; 
+   border-radius: 25px;
+}
+.header-text-fourth-lower-text:hover{
+    border-color: rgb(234, 33, 80); 
+    background-color: rgb(245, 246, 248);
+}
+
+.header-text-fourth-lower-header{
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header-text-fourth-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+/*RESİMLER*/
+.gallery {
+    align-self:flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+
+} 
+.image-container {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    justify-content: center;
+    border-radius: 25px;
+   overflow: hidden;
+  }
+  
+.image {
+    width: 300px; 
+    height: 300px;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    
+  }
+  
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 255);
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+    pointer-events: none; 
+  }
+  
+  .image-container:hover .overlay {
+    transform: translateY(-100%);
+  }
+  
+.image-container:hover .image {
+    opacity: 1;
+  }
+  
+.image-container:hover + .image-container .image {
+    opacity: 0.25;
+  }
+  
+.overlay-image {
+    width: 100%;
+    height: 100%;
+    align-self:baseline;
+    border-radius: 25px;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+  }
+  /*YAZILAR.HTML KISMI */
+
+.yazi-text{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+.texts {
+    width: 900px;
+    max-height: 70px;
+    border: 2px solid rgb(66, 170, 149);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+.texts:hover{
+    border-color: rgb(234, 33, 80); 
+    background-color: rgb(245, 246, 248);
+  }
+.yazi-head{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    margin: 0;
+ }
+.yazi-date{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+/*KADRAJIMDAN KISMI*/
+.photogallery{
+   align-self:flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+/*İLETİŞİM KISMI*/
+.foto-text{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #de1d1d; /* İkon rengi */
+    font-size: 24px; /* İkon boyutu */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+.social-media a:hover {
+    color: #007bff; /* Hover durumunda icon rengi */
+}
+
+/*FOOTER*/
+footer {
+    color: rgb(231, 156, 201);
+    padding: 35px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid;
+    border-color: rgb(211, 27, 190); 
+}
